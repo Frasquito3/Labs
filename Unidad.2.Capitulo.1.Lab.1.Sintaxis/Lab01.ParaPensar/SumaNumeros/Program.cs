@@ -7,3 +7,4 @@ int num2 = int.Parse(Console.ReadLine());
 int suma = num1 + num2;
 
 Console.WriteLine($"\nLa suma de los numeros {num1} y {num2} da como resultado {suma}");
+Console.ReadKey();

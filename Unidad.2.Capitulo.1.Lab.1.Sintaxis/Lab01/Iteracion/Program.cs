@@ -14,3 +14,4 @@ for (int i = cantIteraciones - 1; i >= 0; i--)
     Console.WriteLine("Texto en la posicion: " + i);
     Console.WriteLine(arr[i]);
 }
+Console.ReadKey();

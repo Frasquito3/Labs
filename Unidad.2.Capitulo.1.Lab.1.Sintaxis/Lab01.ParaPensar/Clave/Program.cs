@@ -23,8 +23,10 @@ while (intentos < 4)
 if (band == true)
 {
     Console.WriteLine("\nClave correcta, bienvenido");
+    Console.ReadKey();
 }
 else
 {
     Console.WriteLine("\nIntentos maximos alcanzados");
+    Console.ReadKey();
 }

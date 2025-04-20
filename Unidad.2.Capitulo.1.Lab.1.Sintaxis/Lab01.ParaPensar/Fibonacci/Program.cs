@@ -12,3 +12,4 @@ for (int i = 0; i < cant; i++)
 }
 
 Console.WriteLine($"\nLa suma de los primeros {cant} terminos de Fibonacci es: {suma}");
+Console.ReadKey();
