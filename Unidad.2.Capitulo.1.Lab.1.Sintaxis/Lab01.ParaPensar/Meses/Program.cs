@@ -8,5 +8,6 @@ for (int i = 0; i <= 11; i++)
     if (mes.ToLower() == meses[i])
     {
         Console.WriteLine($"\nAl mes {meses[i]} le corresponde el numero {i+1}");
+        Console.ReadKey();
     }
 }

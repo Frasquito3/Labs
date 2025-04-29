@@ -4,6 +4,7 @@ int numero = int.Parse(Console.ReadLine());
 if (numero < 1 || numero > 3999)
 {
     Console.WriteLine("Numero invalido");
+    Console.ReadKey();
 }
 
 else
@@ -22,4 +23,5 @@ else
         }
     }
     Console.WriteLine($"\nEl numero romano es: {resultado}");
+    Console.ReadKey();
 }

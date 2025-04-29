@@ -34,3 +34,4 @@ while (contador < cantidad)
     }
     primo1++;
 }
+Console.ReadKey();
