@@ -36,7 +36,6 @@ namespace Geometria
 
         public double CalcularSuperficie()
         {
-            // Fórmula de Herón
             double s = CalcularPerimetro() / 2;
             return Math.Sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
         }
