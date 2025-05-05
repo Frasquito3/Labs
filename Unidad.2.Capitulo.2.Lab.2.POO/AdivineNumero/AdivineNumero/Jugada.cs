@@ -28,22 +28,22 @@ namespace AdivineNumero
             adivino = false;
         }
 
-        public string Comparar(int intentos)
+        public string Comparar(int max)
         {
             intentos++;
 
-            if (intentos == numero)
+            if (max == numero)
             {
                 adivino = true;
-                return "¡Correcto! Adivinaste el número.";
+                return "\n\n¡Correcto! Adivinaste el número.\n";
             }
-            else if (intentos < numero)
+            else if (max < numero)
             {
-                return "El número es mayor.";
+                return "\nEl número es mayor.";
             }
             else
             {
-                return "El número es menor.";
+                return "\nEl número es menor.";
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdivineNumero
 {
-    public class Program
+    public class Ini
     {
         public void Main()
         {

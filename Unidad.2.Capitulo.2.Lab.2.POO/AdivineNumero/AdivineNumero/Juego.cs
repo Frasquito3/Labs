@@ -2,7 +2,7 @@
 {
     public class Juego
     {
-        private int record = int.MinValue;
+        private int record = int.MaxValue;
 
         public void ComenzarJuego()
         {
@@ -13,7 +13,7 @@
                 int maxNumero = PreguntarMaximo();
                 Jugada jugada = new Jugada(maxNumero);
 
-                Console.WriteLine("Adiviná el número...");
+                Console.WriteLine("\nAdiviná el número...");
 
                 while (!jugada.Adivino)
                 {
@@ -22,7 +22,7 @@
                     Console.WriteLine(resultado);
                 }
 
-                Console.WriteLine($"¡Adivinaste en {jugada.Intentos} intentos!");
+                Console.WriteLine($"¡Adivinaste en {jugada.Intentos} intentos!\n");
                 CompararRecord(jugada.Intentos);
 
                 seguir = Continuar();
@@ -35,7 +35,7 @@
             if (intentos < record)
             {
                 record = intentos;
-                Console.WriteLine("¡Nuevo récord!");
+                Console.WriteLine($"¡Nuevo récord!");
             }
             else
             {
@@ -45,7 +45,7 @@
 
         public string Continuar()
         {
-            Console.Write("¿Querés jugar de nuevo? (s/n): ");
+            Console.Write("\n¿Querés jugar de nuevo? (s/n): ");
             return Console.ReadLine();
 
         }
@@ -61,7 +61,7 @@
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Error: Ingresá un número válido.");
+                    Console.WriteLine("\nError: Ingresá un número válido.\n");
                 }
             }
         }
@@ -72,12 +72,12 @@
             {
                 try
                 {
-                    Console.Write("Ingresá un número: ");
+                    Console.Write("\nIngresá un número: ");
                     return int.Parse(Console.ReadLine());
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Error: Ingresá un número válido.");
+                    Console.WriteLine("\nError: Ingresá un número válido.\n");
                 }
             }
         }
