@@ -21,5 +21,12 @@
       <FileName>Ini.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="AdivineNumero.JugadaConAyuda" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>JugadaConAyuda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
