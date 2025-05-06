@@ -12,8 +12,16 @@ namespace AdivineNumero
         private int intentos;
         private int numero;
 
-        public int Intentos => intentos;
-        public bool Adivino => adivino;
+        public int Intentos
+        {
+            get => intentos;
+            set => intentos = value;
+        }
+        public bool Adivino
+        {
+            get => adivino;
+            set => adivino = value;
+        }
         public int Numero
         {
             get => numero;
@@ -28,7 +36,11 @@ namespace AdivineNumero
             adivino = false;
         }
 
-        public string Comparar(int max)
+        public Jugada()
+        {
+        }
+
+        public virtual string Comparar(int max)
         {
             intentos++;
 

@@ -11,7 +11,7 @@
             do
             {
                 int maxNumero = PreguntarMaximo();
-                Jugada jugada = new Jugada(maxNumero);
+                Jugada jugada = new JugadaConAyuda(maxNumero);
 
                 Console.WriteLine("\nAdiviná el número...");
 
