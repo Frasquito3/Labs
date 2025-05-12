@@ -8,17 +8,26 @@ namespace FuncionesLINQ
     {
         public IEnumerable<string> ObtenerProvinciasQueEmpiezanConDeterminadasLetras(IEnumerable<string> provincias)
         {
-            throw new NotImplementedException();
+            var selectProv = (from p in provincias
+                              where p.StartsWith("S") || p.StartsWith("T")
+                              select p);
+            return selectProv;
         }
 
         public IEnumerable<int> ObtenerNumerosMayoresA20(IEnumerable<int> numeros)
         {
-            throw new NotImplementedException();
+            var numMayor20 = (from n in numeros
+                              where n > 20
+                              select n);
+            return numMayor20;
         }
 
         public IEnumerable<int> ObtenerCodigoPostalDeCiudadesQueTenganEnSuNombreTresCarateresDeterminados(IEnumerable<Ciudad> ciudades, string ciudad)
         {
-            throw new NotImplementedException();
+            var codPostalCiudades = (from c in ciudades
+                                     where c.Nombre.ToLower().StartsWith(ciudad)
+                                     select c.CodigoPostal);
+            return codPostalCiudades;
         }
 
         public IEnumerable<Empleado> AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldo(IEnumerable<Empleado> empleados, IEnumerable<Empleado> empleadosParaAgregar, string order)
