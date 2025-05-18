@@ -165,13 +165,32 @@ namespace FuncionesLinqTest
         [Fact]
         public void AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldoTest()
         {
-            Console.Clear();
             // Arrange
             var funcionesLinq = new FuncionesLinq();
 
             var empleados = new List<Empleado> { new Empleado() { Id = 1, Nombre = "Gabriela F", Sueldo = 1600.0}, new Empleado() { Id = 2, Nombre = "Federico R", Sueldo = 1200.0} };
-            var empleadosParaAgregar = new List<Empleado> { new Empleado() { Id = 3, Nombre = "Juan D", Sueldo = 1500.0 }, new Empleado() { Id = 4, Nombre = "Jesus T", Sueldo = 1610.5} };
 
+            var empleadosParaAgregar = new List<Empleado> ();
+
+            do
+            {
+                Console.Clear();
+
+                Console.Write("Ingrese el id del empleado a agregar: ");
+                int id = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Ingrese el nombre del empleado a agregar: ");
+                string nombre = Console.ReadLine();
+
+                Console.Write("Ingrese el sueldo del empleado a agregar: ");
+                double sueldo = Convert.ToDouble(Console.ReadLine());
+
+                empleadosParaAgregar.Add(new Empleado() { Id = id, Nombre = nombre, Sueldo = sueldo });
+
+                Console.Write("\n¿Desea agregar otro empleado? (s/n): ");
+            } while (Console.ReadLine().ToLower() == "s");
+
+            Console.Clear();
             Console.Write("Ingrese orden que desea visualizar (ASC o DESC): ");
             string orden = Console.ReadLine();
             Console.Write("\n");
