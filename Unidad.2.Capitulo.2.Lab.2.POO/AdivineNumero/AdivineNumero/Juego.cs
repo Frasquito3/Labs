@@ -13,7 +13,8 @@
                 int maxNumero = PreguntarMaximo();
                 Jugada jugada = new JugadaConAyuda(maxNumero);
 
-                Console.WriteLine("\nAdiviná el número...");
+                Console.Clear();
+                Console.WriteLine("Adiviná el número...");
 
                 while (!jugada.Adivino)
                 {
@@ -46,7 +47,8 @@
         public string Continuar()
         {
             Console.Write("\n¿Querés jugar de nuevo? (s/n): ");
-            return Console.ReadLine();
+            string? vali = Console.ReadLine();
+            return vali;
 
         }
 
@@ -56,8 +58,10 @@
             {
                 try
                 {
+                    Console.Clear();
                     Console.Write("Ingresá el número máximo posible: ");
-                    return int.Parse(Console.ReadLine());
+                    int maximo = int.Parse(Console.ReadLine());
+                    return maximo;
                 }
                 catch (FormatException)
                 {

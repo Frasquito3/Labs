@@ -15,6 +15,7 @@ namespace AdivineNumero
         {
             string mensaje = base.Comparar(intento);
             int diferencia = Math.Abs(intento - Numero);
+            Console.Clear();
 
             if (intento == Numero)
             {

@@ -47,15 +47,15 @@ namespace AdivineNumero
             if (max == numero)
             {
                 adivino = true;
-                return "\n\n¡Correcto! Adivinaste el número.\n";
+                return "¡Correcto! Adivinaste el número.\n";
             }
             else if (max < numero)
             {
-                return "\nEl número es mayor.";
+                return "El número es mayor.";
             }
             else
             {
-                return "\nEl número es menor.";
+                return "El número es menor.";
             }
         }
     }
