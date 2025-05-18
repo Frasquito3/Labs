@@ -32,7 +32,26 @@ namespace FuncionesLINQ
 
         public IEnumerable<Empleado> AgregarEmpleadoListaDevolviendolaOrdenadaPorSueldo(IEnumerable<Empleado> empleados, IEnumerable<Empleado> empleadosParaAgregar, string order)
         {
-            throw new NotImplementedException();
+            var altaEmpleados = empleados.Concat(empleadosParaAgregar);
+
+            if (order.ToUpper() == "ASC")
+            {
+                var empleadosOrdenadosPorSueldo = (from e in altaEmpleados
+                                                   orderby e.Sueldo ascending
+                                                   select e);
+                return empleadosOrdenadosPorSueldo;
+            }
+            else if (order.ToUpper() == "DESC")
+            {
+                var empleadosOrdenadosPorSueldo = (from e in altaEmpleados
+                                                   orderby e.Sueldo descending
+                                                   select e);
+                return empleadosOrdenadosPorSueldo;
+            }
+            else
+            {
+                throw new ArgumentException("El orden debe ser ASC o DESC");
+            }
         }
     }
 }
